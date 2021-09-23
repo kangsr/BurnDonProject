@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<a href="{% url 'home' %}">home 으로 돌아가기</a>
+<hr>
+<a href="{% url 'new' %}">새 버킷리스트 추가하기</a>
+<hr>
+
+    
+{% for bucket in buckets.all %}
+<div class=""> 
+    <div class="">
+      <div class="">
+        <b>버킷리스트: {{ bucket.bucket }}</b>
+        <p>목표 금액: {{bucket.goal_money}}</p>
+        <p>모은 금액: {{ bucket.saving_money }}</p>
+        
+        <a href="{% url 'edit' bucket.id %}">수정하기</a>
+        <a href="{% url 'delete' bucket.id %}">삭제하기</a>
+      </div>
+    </div>
+</div>
+<br>
+<hr>
+{% endfor %}
+
+<p>필요한 총금액: {{ goal_money_sum.goal_money__sum }} </p>
+<p>모은금액: {{ saving_money_sum.saving_money__sum }} </p>
+<p>벌어야하는 금액: {{ earn_money.earn_total }}</p>
+
+</body>
+</html>
