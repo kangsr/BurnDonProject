@@ -15,3 +15,5 @@ source myvenv/Scripts/activate
 cd burndon
 
 pip install django
+
+python manage.py runserver
