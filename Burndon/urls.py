@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from fire.views import home
+import base.urls, login.urls, fire.urls, bucket_list.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name="home"),
+    path('', include(base.urls)),
+    path('login/', include(login.urls)),
+    path('fire/', include(fire.urls)),
+    path('bucket_list/', include(bucket_list.urls)),
 ]
