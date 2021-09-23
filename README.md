@@ -7,3 +7,11 @@ git clone https://github.com/NYeonK/burndon.git
 git init
 
 git remote add origin https://github.com/NYeonK/burndon.git
+
+python -m venv myvenv
+
+source myvenv/Scripts/activate
+
+cd burndon
+
+pip install django
