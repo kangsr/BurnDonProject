@@ -20,4 +20,6 @@ python manage.py makemigrations
 
 python manage.py migrate
 
+pip install django-allauth
+
 python manage.py runserver
