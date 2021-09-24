@@ -9,9 +9,21 @@
 
 </head>
 <body>
+    {% load socialaccount %}
+    {% providers_media_js %}
+
     <h2 class="h2">파이어족의, 파이어족에 의한, 파이어족을 위한</h2>
 
     <h1 class="h1">Burn Don : for your dream</h1>
+
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">로그아웃</a>
+    <br>
+    {{user.username}}님이 로그인 중
+    {% else %}
+    <a href = "{% url 'login' %}">로그인</a>
+    해야됨
+    {% endif %}
 
     <a href = "">
         <div class="service1">
