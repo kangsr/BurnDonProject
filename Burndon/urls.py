@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-import base.urls, login.urls, fire.urls, bucket_list.urls
+import base.urls, login.urls, fire.urls, bucket_list.urls, main.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +23,5 @@ urlpatterns = [
     path('login/', include(login.urls)),
     path('fire/', include(fire.urls)),
     path('bucket_list/', include(bucket_list.urls)),
+    path('main/', include(main.urls)),
 ]

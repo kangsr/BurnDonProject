@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bucket_list',
     'fire',
     'login',
+    'main',
 ]
 
 MIDDLEWARE = [

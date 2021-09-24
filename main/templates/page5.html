@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은퇴 가능 나이, 은퇴 후 삶 알아보기(결과)</title>
+</head>
+<body>
+    <h1>기능1결과창</h1>
+    {% for datas in data %}
+    {% load mathfilters %}
+    목표 금액 달성 가능한 나이(은퇴나이)
+    <p>연간저축액: {{ deposit }}, 은퇴후몇년사냐: {{ lastYear }}, 달성가능나이: {{ goldAge }}</p>
+    {% endfor %}
+</body>
+</html>
