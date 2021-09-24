@@ -49,7 +49,6 @@ INSTALLED_APPS = [
 
     #provider
     'allauth.socialaccount.providers.google',
-
     'django.contrib.sites',
 ]
 
