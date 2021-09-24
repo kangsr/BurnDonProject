@@ -11,7 +11,7 @@
     <p>은퇴 가능 나이, 은퇴 후 삶 알아보기</p>
     <p>내 연봉으로 10억을 벌려면 얼마나 걸릴까?</p>
     <p>그 돈을 벌면 은퇴 후에 잘 살 수 있을까?</p>
-    <form method="POST" action="{% url 'new' %}" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'page2' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit">

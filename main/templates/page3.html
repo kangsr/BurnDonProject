@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>입력창테스트</h1>
-    <form method="POST" action="{% url 'createdata2' %}">
+    <form method="POST" action="{% url 'page3' %}">
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit">

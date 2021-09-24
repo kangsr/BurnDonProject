@@ -4,33 +4,34 @@ from .forms import InputForm
 from .models import UserData
 
 @csrf_exempt
-def new(req):
+def page2(req):
     form = InputForm(req.POST, req.FILES)
     if form.is_valid():
         new_data = form.save(commit=False)
         new_data.save()
         return redirect('page5')
-    return render(req, 'new.html', {'form':form})
+    return render(req, 'page2.html', {'form':form})
 
 def page5(req):
-    data = UserData.objects.values()
-    gold = data[0]['goldMoney'] #목표금액
-    salary = data[0]['salary'] #연봉
-    after = data[0]['afterExpense'] #은퇴후생활비
-    before = data[0]['beforeExpense'] #은퇴전생활비
-    age = data[0]['age']
+    data = UserData.objects.last()
+    gold = data.goldMoney #목표금액
+    salary = data.salary #연봉
+    age = data.age
+    before = data.beforeExpense #은퇴전생활비
+    after = data.afterExpense #은퇴후생활비
+
     deposit = (salary/12)-before #연간저축액
     lastYear = gold/(after*12)
     goldAge = age + gold/(deposit*12) #달성가능 나이
     return render(req, 'page5.html', {'data':data, 'deposit':deposit, 'goldAge':goldAge, 'lastYear':lastYear})
 
-def new2(req):
+def page3(req):
     form = InputForm(req.POST, req.FILES)
     if form.is_valid():
         new_data = form.save(commit=False)
         new_data.save()
-        return redirect('core2')
-    return render(req, 'inputpage2.html', {'form':form})
+        return redirect('page6')
+    return render(req, 'page3.html', {'form':form})
 
 def page6(req):
     data = UserData.objects.values()
@@ -51,4 +52,4 @@ def page6(req):
         year_arr[i].append(year+(i*5))
         yearDeposit_arr[i].append(yearDeposit(i*5))
 
-    return render(req, 'core2.html', {'data':data, 'age_arr':age_arr, 'year_arr':year_arr, 'yearDeposit_arr':yearDeposit_arr})
+    return render(req, 'page6.html', {'data':data, 'age_arr':age_arr, 'year_arr':year_arr, 'yearDeposit_arr':yearDeposit_arr})
