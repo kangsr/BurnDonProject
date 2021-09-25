@@ -32,7 +32,6 @@ ul {
 
 li{
   display: inline-block;
-  color: #230B55;
   text-align: left;
 
 }
@@ -69,6 +68,7 @@ li{
   margin-top: 0;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   opacity: 1;
+  color: #230B55;
 }
 
 
