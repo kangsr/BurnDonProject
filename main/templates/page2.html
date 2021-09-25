@@ -12,15 +12,15 @@
 </head>
 <body>
     {% block content %}
-        <p class="title">자신의 연봉으로 목표 금액을 달성하려면 얼마나 걸릴지 확인해볼 수 있습니다.
-            또한 은퇴 후의 생활비도 예측할 수 있어요.
-        </p>
-        
-        <form method="POST" action="{% url 'page2' %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit">
-        </form>
+    <p class="title">자신의 연봉으로 목표 금액을 달성하려면 얼마나 걸릴지 확인해볼 수 있습니다.
+        또한 은퇴 후의 생활비도 예측할 수 있어요.
+    </p>
+    
+    <form method="POST" action="{% url 'page2' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
     {% endblock %}
 </body>
 </html>
