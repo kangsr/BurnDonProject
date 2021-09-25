@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}</title>
+
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="{% url 'home' %}">BurnDon</a></li>
+            <li><a href="{% url 'service1' %}">Assets</a></li>
+            <li><a href="">Savings</a></li>
+            <li><a href="{% url 'list' %}">BucketList</a></li>
+            <li><a href="{% url 'login' %}">LOGIN</a></li>
+            <li>SIGN UP</li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer id="footer">
+        <p>@어흥올림픽</p>
+        <p>강세륜, 고나연, 전혜인, 허유진</p>
+    </footer>
+
+</body>
+
+</html>

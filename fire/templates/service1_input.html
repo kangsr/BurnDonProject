@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,6 +10,7 @@
     <title>은퇴 가능 나이, 은퇴 후 삶 알아보기</title>
 </head>
 <body>
+    {% block content %}
     <h2>은퇴 가능 나이, 은퇴 후 삶 알아보기</h2>
 
     <h1>내 연봉으로 10억을 벌려면 얼마나 걸릴까?</h1>
@@ -38,8 +42,7 @@
             <input type="submit" id="" class="" value="GO!">
         </div>
     </form>
-    
-
+    {% endblock %}
     
 
 </body>
