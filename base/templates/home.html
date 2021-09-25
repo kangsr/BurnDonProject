@@ -1,14 +1,3 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}
-북로그 : Booklog
-{% endblock %}
-
-{% block link %}
-{% static 'base/css/home.css' %}
-{% endblock %}
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -20,7 +9,6 @@
 
 </head>
 <body>
-    {% block content %}
     {% load socialaccount %}
     {% providers_media_js %}
 
@@ -37,20 +25,20 @@
     해야됨
     {% endif %}
 
-    <a href = "">
+    <a href = "{% url 'page2' %}">
         <div class="service1">
             <p>은퇴 가능 나이,</p>
             <p>은퇴 후 삶 알아보기</p>
         </div>
     </a>
 
-    <a href = "" >
+    <a href = "{% url 'page3' %}" >
         <p class="service2">연도별 예상 저축 금액 알아보기</p>
     </a>
 
     <a href = "{%  url 'list' %}" class="service3">
         <p>나의 버킷 리스트</p>
     </a>
-    {% endblock %}
+
 </body>
 </html>
