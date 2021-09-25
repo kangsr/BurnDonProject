@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bucket_list/css/edit.css' %}">
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
 </head>
 <body>
     {% block content %}
-    <h3>버킷리스트 수정하기</h3>
-    <hr>
+    <p class="head">Bucket List</p>
+    <p class="head2">은퇴 후, 새로운 삶을 꿈꿔보세요</p>
+    
     <form method="POST" enctype="multipart/form-data">
+        <label class = "name">제목</label>
         {%csrf_token%}
+        <label class="money">목표 금액</label>
         {{ edit_post.as_p }}
-        <button type="submit">submit</button>
+
+        <button class="submitbtn" type="submit">확인</button>
     </form>
+
     {% endblock %}
 </body>
 </html>
