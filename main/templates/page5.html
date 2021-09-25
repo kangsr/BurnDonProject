@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="{% block link %} {% endblock %}">
 </head>
 <body>
+    {% block link %}
     <p> 목표 금액을 달성할 수 있는 나이는 {{ goldAge }}세 입니다.</p>
     <p> 이 금액은 은퇴 후 {{ lastYear }}년동안 사용하면 소진됩니다.</p>
-    
+    {% endblock %}
 </body>
 </html>
