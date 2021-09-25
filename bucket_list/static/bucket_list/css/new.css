@@ -55,7 +55,7 @@
 
 .submitbtn{
     top: 801px;
-    left: 770px;
+    left: 50%;
     width: 170px;
     height: 65px;
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;

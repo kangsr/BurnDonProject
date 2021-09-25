@@ -20,10 +20,10 @@
 
 <div class="mainbox">
     <form method="POST" enctype="multipart/form-data">
-        <label class = "name">제목</label>
+        
         {%csrf_token%}
         <br>
-        <label class="money">목표 금액</label>
+        
         {{post_form.as_p}}
         <button class="submitbtn" type="submit">확인</button>
     </form>
