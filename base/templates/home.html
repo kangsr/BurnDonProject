@@ -21,36 +21,28 @@ BurnDon
 </head>
 <body>
     {% block content %}
-    {% load socialaccount %}
-    {% providers_media_js %}
 
-    <h2 class="h2">파이어족의, 파이어족에 의한, 파이어족을 위한</h2>
-
-    <h1 class="h1">Burn Don : for your dream</h1>
-
-    {% if user.is_authenticated %}
-    <a href="{% url 'logout' %}">로그아웃</a>
-    <br>
-    {{user.username}}님이 로그인 중
-    {% else %}
-    <a href = "{% url 'login' %}">로그인</a>
-    해야됨
-    {% endif %}
-
-    <a href = "{% url 'page2' %}">
-        <div class="service1">
-            <p>은퇴 가능 나이,</p>
-            <p>은퇴 후 삶 알아보기</p>
+    <img src="{% static 'base/image/퇴사.jpg' %}">
+    
+    <div id="text">
+        <div class="p">
+            <p id="p1">파이어족의, 파이어족에 의한, 파이어족을 위한</p>
+            <p id="p2">Burn Don : <br>      for your dream</p>
+            
+            <ui id="first">
+                <li>1000M</li>
+                <li>30M</li>
+                <li>0+</li>
+            </ui>
+            <br>
+            <ui id="second">
+                <li>목표 금액</li>
+                <li>현재 금액</li>
+                <li>버킷리스트</li>
+            </ui>
+        
         </div>
-    </a>
-
-    <a href = "{% url 'page3' %}" >
-        <p class="service2">연도별 예상 저축 금액 알아보기</p>
-    </a>
-
-    <a href = "{%  url 'list' %}" class="service3">
-        <p>나의 버킷 리스트</p>
-    </a>
+    </div>
     {% endblock %}
 </body>
 </html>

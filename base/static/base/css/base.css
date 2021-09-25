@@ -23,20 +23,40 @@ a {
 
 
 ul {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 130px;
   height: auto;
-  margin: 0;
+  text-align: center;
 }
 
-li {
+li{
   display: inline-block;
   color: #230B55;
-
   text-align: left;
-  font: normal normal bold 30px/40px Segoe UI;
-  letter-spacing: 0px;
 
 }
 
+#a{
+  
+  font: normal normal bold 65px/86px Segoe UI;
+  letter-spacing: 0px;
+}
+
+
+#b,#c,#d,#e,#f {
+  margin-left:140px;
+  font: normal normal bold 30px/40px Segoe UI;  letter-spacing: 0px;
+}
+
+#e{
+  margin-left:240px;
+  font: normal normal bold 30px/40px Segoe UI;  letter-spacing: 0px;
+}
+#f{
+  margin-left:70px;
+  font: normal normal bold 30px/40px Segoe UI;  letter-spacing: 0px;
+}
 
 /* navbar */
 
@@ -50,6 +70,8 @@ li {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   opacity: 1;
 }
+
+
 
 
 /* footer */
@@ -74,3 +96,6 @@ li {
 
   font-family: 'Eulyoo1945-Regular';
 }
+
+
+
