@@ -28,7 +28,7 @@
       <div class="">
         <div class="">
           <b class="name">{{ bucket.bucket }}</b>
-          <p class="money">{{bucket.goal_money}}</p>
+          <p class="money">{{bucket.goal_money}}만원</p>
           
           
           <a class="editbtn" href="{% url 'edit' bucket.id %}">수정</a>
@@ -40,8 +40,8 @@
 
     {% endfor %}
 
-    <p class= "amount">필요한 금액:</p>
-    <p class="moneySum">{{ goal_money_sum.goal_money__sum }}</p>
+    <div class= "amount"><p>필요한 금액</p></div>
+    <div class="moneySum"><p>{{ goal_money_sum.goal_money__sum }}만원</p></div>
 
   {% endblock %}
 </body>

@@ -1,10 +1,9 @@
 .head {
-    top: 301px;
+    margin-top: 0px;
+    top: 250px;
     left: 757px;
     width: 405px;
     height: 106px;
-    font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-600) 80px/106px var(--unnamed-font-family-segoe-ui);
-    color: var(--unnamed-color-766391);
     text-align: center;
     font: italic normal 600 80px/106px Segoe UI;
     letter-spacing: 0px;
@@ -116,38 +115,41 @@
     top: 858px;
     left: 752px;
     width: 203px;
-    height: 70px;
+    height: 50px;
     background: var(--unnamed-color-9f8fb8) 0% 0% no-repeat padding-box;
     border: 1px solid var(--unnamed-color-707070);
     background: #9F8FB8 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 10px 0px 0px 10px;
     opacity: 1;
+
+    float: left;
 }
 
 .moneySum {
     top: 858px;
     left: 955px;
     width: 214px;
-    height: 70px;
-    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    border: 1px solid var(--unnamed-color-707070);
+    height: 50px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #707070;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 10px 10px 0px;
     opacity: 1;
 
     top: 876px;
     left: 989px;
     width: 146px;
-    height: 34px;
     color: var(--unnamed-color-707070);
     text-align: center;
-    font: normal normal normal 30px/35px MoeumT R;
+    font: normal normal normal 25px MoeumT R;
     letter-spacing: 2.4px;
     color: #707070;
     opacity: 1;
 
-
+    float: left;
 }
 
+p{
+    text-align: center;
+    margin-top: 10px;
+}
