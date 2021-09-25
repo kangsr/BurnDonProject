@@ -9,9 +9,12 @@
 <body>
     {% load socialaccount %}
     {% providers_media_js %}
-    <h1>구글로그인</h1>
-
-    <a href="{% provider_login_url 'google' %}">구글 로그인</a>
+    <h1>로그인</h1>
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">로그인</button>
+    </form>
     
     
 </body>
