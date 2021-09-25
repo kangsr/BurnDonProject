@@ -11,35 +11,35 @@
     <link rel="stylesheet" href="{% block link %} {% endblock %}">
 </head>
 <!-- <a href="{% url 'home' %}">home 으로 돌아가기</a> -->
+<body>
+  {% block content %}
+    <p class="head">Bucket List</p>
+    <p class="head2">은퇴 후, 새로운 삶을 꿈꿔보세요</p>
 
-{% block content %}
-<p class="head">Bucket List</p>
-<p class="head2">은퇴 후, 새로운 삶을 꿈꿔보세요</p>
-
-<a class="addbtn" href="{% url 'new' %}">추가하기</a>
+    <a class="addbtn" href="{% url 'new' %}">추가하기</a>
 
 
-    
-{% for bucket in buckets.all %}
+        
+    {% for bucket in buckets.all %}
 
-  <div class="">
-    <div class="">
-      <b class="name">{{ bucket.bucket }}</b>
-      <p class="money">{{bucket.goal_money}}</p>
-      
-      
-      <a class="editbtn" href="{% url 'edit' bucket.id %}">수정</a>
-      <a class="deletebtn" href="{% url 'delete' bucket.id %}">삭제</a>
-    </div>
-  </div>
+      <div class="">
+        <div class="">
+          <b class="name">{{ bucket.bucket }}</b>
+          <p class="money">{{bucket.goal_money}}</p>
+          
+          
+          <a class="editbtn" href="{% url 'edit' bucket.id %}">수정</a>
+          <a class="deletebtn" href="{% url 'delete' bucket.id %}">삭제</a>
+        </div>
+      </div>
 
-  <br>
+      <br>
 
-{% endfor %}
+    {% endfor %}
 
-<p class= "amount">필요한 금액:</p>
-<p class="moneySum">{{ goal_money_sum.goal_money__sum }}</p>
+    <p class= "amount">필요한 금액:</p>
+    <p class="moneySum">{{ goal_money_sum.goal_money__sum }}</p>
 
-{% endblock %}
+  {% endblock %}
 </body>
 </html>
