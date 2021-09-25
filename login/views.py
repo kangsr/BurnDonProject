@@ -1,8 +1,9 @@
 from django.contrib import auth
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.base_user import AbstractBaseUser
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.

@@ -18,11 +18,12 @@
     <nav id="navbar">
         <ul>
             <li id="a"><a href="{% url 'home' %}">BurnDon</a></li>
-            <li id="b"><a href="{% url 'service1' %}">Assets</a></li>
-            <li id="c"><a href="">Savings</a></li>
+            <li id="b"><a href="{% url 'page2' %}">Assets</a></li>
+            <li id="c"><a href="{% url 'page3' %}">Savings</a></li>
             <li id="d"><a href="{% url 'list' %}">BucketList</a></li>
             <li id="e"><a href="{% url 'login' %}">LOGIN</a></li>
-            <li id="f">SIGN UP</li>
+            <li id="f"><a href="">SIGN UP</a></li>
+            <li id=""><a href="{% url 'logout' %}">LOGOUT</a></li>
         </ul>
     </nav>
     
