@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    {% block content %}
     <h3>버킷리스트 수정하기</h3>
     <hr>
     <form method="POST" enctype="multipart/form-data">
@@ -15,7 +18,6 @@
         {{ edit_post.as_p }}
         <button type="submit">submit</button>
     </form>
-
-
+    {% endblock %}
 </body>
 </html>

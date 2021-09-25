@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>은퇴 가능 나이, 은퇴 후 삶 알아보기(결과)</title>
+    <link rel="stylesheet" href="{% static 'main/css/page5.css' %}">
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
 </head>
 <body>
-    <h1>기능1결과창</h1>
-    목표 금액 달성 가능한 나이(은퇴나이)
-    <p>연간저축액: {{ deposit }}, 은퇴후몇년사냐: {{ lastYear }}, 달성가능나이: {{ goldAge }}</p>
+    <p> 목표 금액을 달성할 수 있는 나이는 {{ goldAge }}세 입니다.</p>
+    <p> 이 금액은 은퇴 후 {{ lastYear }}년동안 사용하면 소진됩니다.</p>
+    
 </body>
 </html>

@@ -1,0 +1,13 @@
+.title {
+    top: 327px;
+    left: 351px;
+    width: 1218px;
+    height: 54px;
+    font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-600) 40px/53px var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-707070);
+    text-align: center;
+    font: italic normal 600 40px/53px Segoe UI;
+    letter-spacing: 3.2px;
+    color: #707070;
+    opacity: 1;
+}

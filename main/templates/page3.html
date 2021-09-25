@@ -1,13 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>두번째페이지:입력</title>
+    <title>예상 저축 금액 알아보기</title>
+    <link rel="stylesheet" href="{% static 'main/css/page3.css' %}">
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
 </head>
 <body>
-    <h1>입력창테스트</h1>
+    <p class = 'title'>현재의 데이터로 앞으로 모을 수 있는 금액을 계산해보세요.</p>
     <form method="POST" action="{% url 'page3' %}">
         {% csrf_token %}
         {{form.as_p}}

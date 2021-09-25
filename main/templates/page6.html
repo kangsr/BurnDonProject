@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>두번째기능</title>
+    <link rel="stylesheet" href="{% static 'main/css/page6.css' %}">
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
 </head>
 <body>
-    <h1>기능두번째결과창</h1>
+
     <p>
         연도와 나이
         {{age_arr}}<br>

@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>은퇴 가능 나이, 은퇴 후 삶 알아보기(입력)</title>
+    <link rel="stylesheet" href="{% static 'main/css/page2.css' %}">
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
 </head>
 <body>
-    <h1>입력창테스트</h1>
-    <p>은퇴 가능 나이, 은퇴 후 삶 알아보기</p>
-    <p>내 연봉으로 10억을 벌려면 얼마나 걸릴까?</p>
-    <p>그 돈을 벌면 은퇴 후에 잘 살 수 있을까?</p>
+    
+    <p class="title">자신의 연봉으로 목표 금액을 달성하려면 얼마나 걸릴지 확인해볼 수 있습니다.
+        또한 은퇴 후의 생활비도 예측할 수 있어요.
+    </p>
+    
     <form method="POST" action="{% url 'page2' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}

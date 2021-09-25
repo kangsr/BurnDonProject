@@ -1,0 +1,20 @@
+.title {
+    top: 293px;
+    left: 275px;
+    width: 1370px;
+    height: 153px;
+    background: var(--unnamed-color-9f8fb8) 0% 0% no-repeat padding-box;
+    background: #9F8FB8 0% 0% no-repeat padding-box;
+    opacity: 0.79;
+
+    top: 315px;
+    left: 351px;
+    width: 1218px;
+    height: 108px;
+    color: var(--unnamed-color-ffffff);
+    text-align: center;
+    font: normal normal bold 40px/53px Hancom Gothic;
+    letter-spacing: 3.2px;
+    color: #FFFFFF;
+    opacity: 1;
+}

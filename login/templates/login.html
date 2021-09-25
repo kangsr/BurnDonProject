@@ -10,6 +10,8 @@
     <title>Document</title>
 </head>
 <body>
+    {% block content %}
+
     {% load socialaccount %}
     {% providers_media_js %}
     <h1>로그인</h1>
@@ -18,5 +20,6 @@
         {{form.as_p}}
         <button type="submit">로그인</button>
     </form>  
+    {% endblock %}
 </body>
 </html>
