@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'bucket_list.apps.BucketListConfig',
     'fire.apps.FireConfig',
     'login.apps.LoginConfig',
+    'main',
 
     #allauth
     'allauth',
