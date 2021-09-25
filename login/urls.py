@@ -6,4 +6,5 @@ urlpatterns = [
     path('login/', login.views.login, name='login'),
     path('accounts/', include('allauth.urls')),  
     path('logout', login.views.logout_view, name="logout"),
+    path('signup', login.views.resister_veiw, name="signup"),
 ]
