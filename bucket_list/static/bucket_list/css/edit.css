@@ -1,0 +1,79 @@
+.head {
+    top: 301px;
+    left: 757px;
+    width: 405px;
+    height: 106px;
+    font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-600) 80px/106px var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-766391);
+    text-align: left;
+    font: italic normal 600 80px/106px Segoe UI;
+    letter-spacing: 0px;
+    color: #766391;
+    opacity: 1;
+}
+
+.head2 {
+    top: 425px;
+    left: 774px;
+    width: 372px;
+    height: 27px;
+    color: var(--unnamed-color-9f8fb8);
+    text-align: center;
+    font: normal normal normal 25px/28px MoeumT R;
+    letter-spacing: 2px;
+    color: #9F8FB8;
+    opacity: 1;
+}
+
+.name {
+    top: 547px;
+    left: 751px;
+    width: 101px;
+    height: 54px;
+    font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-600) 40px/53px var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-707070);
+    text-align: center;
+    font: normal 600 40px/53px Segoe UI;
+    letter-spacing: 3.2px;
+    color: #707070;
+    opacity: 1;
+}
+
+.money {
+    top: 644px;
+    left: 651px;
+    width: 206px;
+    height: 54px;
+    font: normal normal bold 40px/53px var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-707070);
+    text-align: center;
+    font: normal normal bold 40px/53px Segoe UI;
+    letter-spacing: 1.6px;
+    color: #707070;
+    opacity: 1;
+}
+
+.submitbtn{
+    top: 801px;
+    left: 770px;
+    width: 170px;
+    height: 65px;
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--unnamed-color-707070);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 15px;
+    opacity: 1;
+
+    top: 815px;
+    left: 768px;
+    width: 170px;
+    height: 40px;
+    font: normal normal bold 30px/40px var(--unnamed-font-family-segoe-ui);
+    color: var(--unnamed-color-707070);
+    text-align: center;
+    font: normal normal bold 30px/40px Segoe UI;
+    letter-spacing: 2.4px;
+    color: #707070;
+    opacity: 1;
+}
